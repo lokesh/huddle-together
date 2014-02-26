@@ -14,12 +14,13 @@
 
 /* line 26, ../sass/main.sass */
 .body {
+  margin: 0;
   font-family: "Range", "Lucida Grande", "Lucida Sans", sans-serif;
   font-size: 14px;
   text-align: center;
 }
 
-/* line 31, ../sass/main.sass */
+/* line 32, ../sass/main.sass */
 .link {
   display: block;
   width: 100%;
@@ -35,12 +36,12 @@
   -o-transition: opacity 2s 2.5s;
   transition: opacity 2s 2.5s;
 }
-/* line 41, ../sass/main.sass */
+/* line 42, ../sass/main.sass */
 .link:hover {
   text-decoration: underline;
 }
 
-/* line 44, ../sass/main.sass */
+/* line 45, ../sass/main.sass */
 .header {
   position: absolute;
   top: 50%;
@@ -54,7 +55,7 @@
   user-select: none;
 }
 
-/* line 54, ../sass/main.sass */
+/* line 55, ../sass/main.sass */
 .title {
   margin-top: -0.5em;
   font-size: 50px;
@@ -66,24 +67,24 @@
   transition: opacity 2s 2s;
 }
 
-/* line 60, ../sass/main.sass */
+/* line 61, ../sass/main.sass */
 .canvas {
   display: block;
 }
 
-/* line 63, ../sass/main.sass */
+/* line 64, ../sass/main.sass */
 .hide {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
 
 @media (max-width: 768px) {
-  /* line 67, ../sass/main.sass */
+  /* line 68, ../sass/main.sass */
   .title {
     font-size: 36px;
   }
 
-  /* line 70, ../sass/main.sass */
+  /* line 71, ../sass/main.sass */
   .link {
     top: 56%;
     font-size: 16px;
