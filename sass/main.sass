@@ -1,14 +1,15 @@
 @import compass/css3
 @import compass/css3/user-interface
 
-// Colors
-$dark-gray: #222
-$gray:      #7e91a9
-$red:       #f9472a
-$yellow:    #ffba15
-$green:     #56cb48
-$blue:      #4da7ee
 
+//== Colors
+
+$dark-gray: #222
+$gray:      #999
+$blue:      #4ae
+
+
+//== Fonts
 
 @font-face
   font-family: "Range"
@@ -23,6 +24,8 @@ $blue:      #4da7ee
   font-style: normal
 
 
+//== Type
+
 .body
   margin: 0
   font-family: "Range", "Lucida Grande", "Lucida Sans", sans-serif
@@ -34,7 +37,7 @@ $blue:      #4da7ee
   width: 100%
   padding: 1em 0
   position: absolute
-  top: 53%
+  top: 56%
   color: $blue
   font-size: 16px
   text-decoration: none
@@ -53,7 +56,7 @@ $blue:      #4da7ee
   +user-select(none)
 
 .title
-  margin-top: -0.5em    
+  margin-top: -1em    
   font-size: 50px
   font-weight: normal
   +transition(opacity 2s 2s)
@@ -64,10 +67,11 @@ $blue:      #4da7ee
 .hide
   +opacity(0)
 
-@media (max-width: 768px)
+@media (max-width: 480px)
   .title
     font-size: 36px
 
+@media (max-width: 320px)
   .link
-    top: 56%
-    font-size: 16px
+    top: 54%
+    font-size: 14px

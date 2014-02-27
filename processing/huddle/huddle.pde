@@ -6,7 +6,7 @@
 ArrayList<Vehicle> vehicles;
 
 void setup() {
-  background(11, 17, 32);
+  background(20, 20, 20);
   size($(window).width(), $(window).height());
   
   // We are now making random vehicles and storing them in an ArrayList
@@ -17,7 +17,7 @@ void setup() {
 }
 
 void draw() {
-  background(11, 17, 32);
+  background(20, 20, 20);
 
   for (Vehicle v : vehicles) {
     // Path following and separation are worked on in this function
@@ -57,7 +57,7 @@ class Vehicle {
     // Constructor initialize all values
   Vehicle(float x, float y) {
     location = new PVector(x, y);
-    r = 10;
+    r = 8;
     maxspeed = 3;
     maxforce = 0.2;
     acceleration = new PVector(0, 0);
@@ -140,7 +140,7 @@ class Vehicle {
   void display() {
     var fillAlpha = ((frameCount * 5) <= 255) ? (frameCount * 5): 255;
     noStroke();
-    fill(44, 55, 49, fillAlpha);
+    fill(50, 50, 50, fillAlpha);
     pushMatrix();
     translate(location.x, location.y);
     ellipse(0, 0, r, r);
