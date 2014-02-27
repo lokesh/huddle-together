@@ -7,7 +7,7 @@ ArrayList<Vehicle> vehicles;
 
 void setup() {
   background(20, 20, 20);
-  size($(window).width(), $(window).height());
+  size(document.documentElement.clientWidth, document.documentElement.clientHeight);
   
   // We are now making random vehicles and storing them in an ArrayList
   vehicles = new ArrayList<Vehicle>();

@@ -4,7 +4,7 @@
 
 //== Colors
 
-$dark-gray: #222
+$dark-gray: #141414
 $gray:      #999
 $blue:      #4ae
 
@@ -28,6 +28,7 @@ $blue:      #4ae
 
 .body
   margin: 0
+  background-color: $dark-gray
   font-family: "Range", "Lucida Grande", "Lucida Sans", sans-serif
   font-size: 14px
   text-align: center
@@ -37,11 +38,11 @@ $blue:      #4ae
   width: 100%
   padding: 1em 0
   position: absolute
-  top: 56%
+  top: 57%
   color: $blue
   font-size: 16px
   text-decoration: none
-  +transition(opacity 2s 2.5s)
+  +transition(opacity 2s 3s)
   &:hover
     text-decoration: underline
 
@@ -64,7 +65,7 @@ $blue:      #4ae
 .canvas
   display: block
 
-.hide
+.hidden
   +opacity(0)
 
 @media (max-width: 480px)
