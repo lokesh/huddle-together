@@ -30,49 +30,46 @@ $blue:      #4ae
   margin: 0
   background-color: $dark-gray
   font-family: "Range", "Lucida Grande", "Lucida Sans", sans-serif
-  font-size: 14px
   text-align: center
 
-.link
-  display: block
-  width: 100%
-  padding: 1em 0
-  position: absolute
-  top: 57%
-  color: $blue
-  font-size: 16px
-  text-decoration: none
-  +transition(opacity 2s 3s)
-  &:hover
-    text-decoration: underline
-
-.header
-  position: absolute
-  top: 50%
-  left: 0%
-  width: 100%
+.title
+  position: relative
+  z-index: 10
+  margin-bottom: 0.3em
   color: $gray
-  text-align: center
+  font-size: 50px
+  font-weight: normal
+  +scale(1)
+  +transition(opacity 4s 2s, transform 4s 2s)
   pointer-events: none
   +user-select(none)
 
-.title
-  margin-top: -1em    
-  font-size: 50px
-  font-weight: normal
-  +transition(opacity 2s 2s)
+.link
+  position: relative
+  z-index: 10
+  color: $blue
+  font-size: 16px
+  text-decoration: none
+  +scale(1)
+  +transition(opacity 3s 4.5s, transform 3s 4.5s)
+  &:hover
+    text-decoration: underline
 
 .canvas
   display: block
+  position: absolute
+  top: 0
+  left: 0
 
 .hidden
   +opacity(0)
+  +scale(0.9)
 
 @media (max-width: 480px)
   .title
     font-size: 36px
 
+
 @media (max-width: 320px)
-  .link
-    top: 54%
+  .link  
     font-size: 14px

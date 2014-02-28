@@ -7,13 +7,17 @@ ArrayList<Vehicle> vehicles;
 
 void setup() {
   background(20, 20, 20);
-  size(document.documentElement.clientWidth, document.documentElement.clientHeight);
+  resize();
   
   // We are now making random vehicles and storing them in an ArrayList
   vehicles = new ArrayList<Vehicle>();
   for (int i = 0; i < 50; i++) {
     vehicles.add(new Vehicle(random(width),random(height)));
   }
+}
+
+void resize() {
+  size(window.innerWidth, window.innerHeight);
 }
 
 void draw() {
@@ -53,15 +57,17 @@ class Vehicle {
   float r;
   float maxforce;    // Maximum steering force
   float maxspeed;    // Maximum speed
+  boolean hadCollision;
 
     // Constructor initialize all values
   Vehicle(float x, float y) {
     location = new PVector(x, y);
     r = 8;
     maxspeed = 3;
-    maxforce = 0.2;
+    maxforce = 0.1;
     acceleration = new PVector(0, 0);
     velocity = new PVector(0, 0);
+    hadCollision = false;
   }
 
   void applyForce(PVector force) {
@@ -96,7 +102,7 @@ class Vehicle {
   // Separation
   // Method checks for nearby vehicles and steers away
   PVector separate (ArrayList<Vehicle> vehicles) {
-    float desiredseparation = r*2;
+    float desiredseparation = r;
     PVector sum = new PVector();
     int count = 0;
     // For every boid in the system, check if it's too close
@@ -110,6 +116,7 @@ class Vehicle {
         diff.div(d);        // Weight by distance
         sum.add(diff);
         count++;            // Keep track of how many
+        hadCollision = true;
       }
     }
     // Average -- divide by how many
@@ -140,7 +147,13 @@ class Vehicle {
   void display() {
     var fillAlpha = ((frameCount * 5) <= 255) ? (frameCount * 5): 255;
     noStroke();
-    fill(50, 50, 50, fillAlpha);
+    if (hadCollision == true) {
+      fill(250, 200, 50, fillAlpha);  
+      hadCollision = false;
+    } else {
+      fill(50, 50, 50, fillAlpha);  
+    }
+    
     pushMatrix();
     translate(location.x, location.y);
     ellipse(0, 0, r, r);
