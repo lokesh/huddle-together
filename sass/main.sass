@@ -9,6 +9,17 @@ $gray:      #999
 $blue:      #4ae
 
 
+//== Animations
+
+=animate($name: fadeIn, $duration: 1s, $delay: .2s, $function: ease, $mode: both)
+  +experimental(animation, $name $duration $delay $function $mode)
+
+@-webkit-keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
 //== Fonts
 
 @font-face
@@ -39,8 +50,7 @@ $blue:      #4ae
   color: $gray
   font-size: 50px
   font-weight: normal
-  +scale(1)
-  +transition(opacity 4s 2s, transform 4s 2s)
+  +animate(fadeIn, 3s, 2s)
   pointer-events: none
   +user-select(none)
 
@@ -50,8 +60,7 @@ $blue:      #4ae
   color: $blue
   font-size: 16px
   text-decoration: none
-  +scale(1)
-  +transition(opacity 3s 4.5s, transform 3s 4.5s)
+  +animate(fadeIn, 3s, 4s)
   &:hover
     text-decoration: underline
 
@@ -60,10 +69,6 @@ $blue:      #4ae
   position: absolute
   top: 0
   left: 0
-
-.hidden
-  +opacity(0)
-  +scale(0.9)
 
 @media (max-width: 480px)
   .title

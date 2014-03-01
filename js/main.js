@@ -1,15 +1,5 @@
 window.addEventListener('load', function (event) {
   positionHeader();
-
-	// Unhide logo and link
-  // Delay by 100ms. If the JS positioning and the JS CSS class removal happen in sequence without a
-  // delay the CSS transition does not always get applied.
-  setTimeout(function() {
-    var hiddenElements = document.querySelectorAll('.hidden');
-    for (var i = 0, len = hiddenElements.length; i < len; i++) {
-      hiddenElements[i].className = hiddenElements[i].className.replace(' hidden', '');
-    }
-  }, 100);
 });
 
 window.addEventListener('resize', function (event) {
