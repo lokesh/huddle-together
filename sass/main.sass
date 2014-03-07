@@ -20,6 +20,19 @@ $green:     #61c227
   100%
     opacity: 1
 
+@-moz-keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+
 
 //== Fonts
 
@@ -51,7 +64,7 @@ $green:     #61c227
   color: white
   font-size: 50px
   font-weight: normal
-  +animate(fadeIn, 3s, 2s)
+  +animate(fadeIn, 4s, 2s, ease-in)
   pointer-events: none
   +user-select(none)
 
@@ -63,7 +76,7 @@ $green:     #61c227
   color: $green
   font-size: 16px
   text-decoration: none
-  +animate(fadeIn, 3s, 4s)
+  +animate(fadeIn, 3s, 5s, ease-in)
   +transition(border 1s)
   &:hover
     border-bottom-color: $green
