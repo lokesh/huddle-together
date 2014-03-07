@@ -6,7 +6,7 @@
 ArrayList<Vehicle> vehicles;
 
 void setup() {
-  background(20, 20, 20);
+  background(0, 0, 0);
   resize();
   
   // We are now making random vehicles and storing them in an ArrayList
@@ -21,7 +21,7 @@ void resize() {
 }
 
 void draw() {
-  background(20, 20, 20);
+  background(0, 0, 0);
 
   for (Vehicle v : vehicles) {
     // Path following and separation are worked on in this function
@@ -148,7 +148,7 @@ class Vehicle {
     var fillAlpha = ((frameCount * 5) <= 255) ? (frameCount * 5): 255;
     noStroke();
     if (hadCollision == true) {
-      fill(250, 200, 50, fillAlpha);  
+      fill(97, 194, 39, fillAlpha);  
       hadCollision = false;
     } else {
       fill(50, 50, 50, fillAlpha);  
@@ -161,10 +161,3 @@ class Vehicle {
   }
 
 }
-
-
-
-
-
-
-

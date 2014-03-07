@@ -7,7 +7,7 @@
 $dark-gray: #141414
 $gray:      #999
 $blue:      #4ae
-
+$green:     #61c227
 
 //== Animations
 
@@ -19,6 +19,7 @@ $blue:      #4ae
     opacity: 0
   100%
     opacity: 1
+
 
 //== Fonts
 
@@ -39,7 +40,7 @@ $blue:      #4ae
 
 .body
   margin: 0
-  background-color: $dark-gray
+  background-color: black
   font-family: "Range", "Lucida Grande", "Lucida Sans", sans-serif
   text-align: center
 
@@ -47,7 +48,7 @@ $blue:      #4ae
   position: relative
   z-index: 10
   margin-bottom: 0.3em
-  color: $gray
+  color: white
   font-size: 50px
   font-weight: normal
   +animate(fadeIn, 3s, 2s)
@@ -59,13 +60,13 @@ $blue:      #4ae
   z-index: 10
   padding-bottom: 2px
   border-bottom: 2px solid transparent
-  color: $blue
+  color: $green
   font-size: 16px
   text-decoration: none
   +animate(fadeIn, 3s, 4s)
   +transition(border 1s)
   &:hover
-    border-bottom-color: $blue
+    border-bottom-color: $green
 
 .canvas
   display: block
