@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    host_config: grunt.file.readJSON('.host_config'),
 
     compass: {                
       dist: {                  
@@ -31,16 +31,13 @@ module.exports = function(grunt) {
     'ftp-deploy': {
       build: {
         auth: {
-          host: 'huddletogether.com',
-          port: 21
+          host: '<%- host_config.host %>',
+          port: '<%- host_config.port %>'
         },
         src: '.',
-        dest: '/home/lokesh/webapps/huddletogether',
+        dest: '<%- host_config.directory %>',
         exclusions: [
-          '.DS_Store',
-          '.sass-cache',
-          '.git*',
-          '.ftppass',
+          '.*',
           'node_modules',
           'sass',
           'Gruntfile.js',
