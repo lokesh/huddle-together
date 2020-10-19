@@ -23,7 +23,7 @@
 .title {
   position: relative;
   z-index: 10;
-  margin-bottom: 0.3em;
+  margin-bottom: 0 0 0.3em 0;
   color: white;
   font-size: 36px;
   font-weight: 500;
