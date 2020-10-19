@@ -1,1 +1,3 @@
-Copyright (c) 2014 Lokesh Dhakar
+HuddleTogether.com
+
+Copyright (c) Lokesh Dhakar
