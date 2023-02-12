@@ -8,3 +8,4 @@
 	- SSL Certificate provided by Let's Encrypt and generated via Netlify admin.
 - Domain name registered at Name.com
 
+
